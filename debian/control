@@ -1,0 +1,19 @@
+Source: nitrux-gpu-firmware
+Section: misc
+Priority: optional
+Maintainer: Uri Herrera <uri_herrera@nxos.org>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: http://nxos.org
+
+
+Package: nitrux-gpu-firmware
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Extra firmware for some GPUs
+ Adds extra firmware for the following GPUs:
+  - Navi 10
+  - Navi 14
+  - Renoir
+  - Intel HD
+
