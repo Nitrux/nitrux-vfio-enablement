@@ -1,3 +1,32 @@
 #!/bin/bash
 
+#	Add vfio modules and files.
+
+>> /etc/initramfs-tools/modules printf "%s\n" \
+	"install vfio-pci /usr/bin/vfio-override" \
+	"install vfio_pci /usr/bin/vfio-override" \
+	"softdep nvidia pre: vfio vfio_pci" \
+	"softdep nouveau pre: vfio vfio_pci" \
+	"softdep amdgpu pre: vfio vfio_pci" \
+	"softdep radeon pre: vfio vfio_pci" \
+	"softdep i915 pre: vfio vfio_pci" \
+	"vfio" \
+	"vfio_iommu_type1" \
+	"vfio_virqfd" \
+	"options vfio_pci ids=" \
+	"vfio_pci ids=" \
+	"vfio_pci" \
+	"nvidia" \
+	"nouveau" \
+	"amdgpu" \
+	"radeon" \
+	"i915"
+
+>> /etc/modules printf "%s\n" \
+	"vfio" \
+	"vfio_iommu_type1" \
+	"vfio_pci" \
+	"vfio_pci ids="
+
+
 exit 0

@@ -1,6 +1,6 @@
-# Nitrux GPU Firmware [![Build Status](https://travis-ci.org/Nitrux/nitrux-gpu-firmware.svg?branch=master)](https://travis-ci.org/Nitrux/nitrux-gpu-firmware)
+# Nitrux VFIO Enablement [![Build Status](https://travis-ci.org/Nitrux/nitrux-vfio-enablement.svg?branch=master)](https://travis-ci.org/Nitrux/enablement)
 
-This package adds extra firmware for some GPUs.
+This package adds the initramfs-tools and modules configuration to enable VFIO in Nitrux.
 
 # Issues
 If you find problems with the contents of this repository please create an issue.
