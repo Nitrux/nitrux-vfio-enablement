@@ -1,5 +1,12 @@
-nitrux-vfio-enablement (0.0.1)  nxos; urgency=medium
+nitrux-vfio-enablement (0.0.2)  nitrux; urgency=medium
+
+  * Update package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 24 Jul 2020 13:743:00 -0500
+
+nitrux-vfio-enablement (0.0.1)  nitrux; urgency=medium
 
   * Create package.
 
- -- Uri Herrera <uri_herrera@nxos.org>  Thu, 23 Jul 2020 17:16:00
+ -- Uri Herrera <uri_herrera@nxos.org>  Thu, 23 Jul 2020 17:16:00 -0500
+
