@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 #	Add vfio modules and files.
 
 >> /etc/initramfs-tools/modules printf "%s\n" \

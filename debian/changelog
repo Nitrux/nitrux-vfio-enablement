@@ -1,3 +1,9 @@
+nitrux-vfio-enablement (0.0.3)  nitrux; urgency=medium
+
+  * Enable xtrace.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 24 Jul 2020 14:08:00 -0500
+
 nitrux-vfio-enablement (0.0.2)  nitrux; urgency=medium
 
   * Update package.
