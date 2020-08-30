@@ -1,3 +1,9 @@
+nitrux-vfio-enablement (0.0.5)  nitrux; urgency=medium
+
+  * Delete /etc/modprobe.d/vfio_pci.conf.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 29 Aug 2020 19:46:00 -0500
+ 
 nitrux-vfio-enablement (0.0.4)  nitrux; urgency=medium
 
   * Remove install command for module vfio_pci.
