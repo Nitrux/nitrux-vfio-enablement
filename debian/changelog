@@ -1,3 +1,9 @@
+nitrux-vfio-enablement (0.0.7)  nitrux; urgency=medium
+
+  * Update override script, remove refs in /etc/initramfs-tools/modules.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 19 Jul 2023 17:10:00 -0500
+
 nitrux-vfio-enablement (0.0.6)  nitrux; urgency=medium
 
   * Delete refs to vfio_pci.

@@ -5,7 +5,6 @@ set -x
 #	Add vfio modules and files.
 
 >> /etc/initramfs-tools/modules printf "%s\n" \
-	"install vfio-pci /usr/bin/vfio-override" \
 	"softdep nvidia pre: vfio vfio_pci" \
 	"softdep nouveau pre: vfio vfio_pci" \
 	"softdep amdgpu pre: vfio vfio_pci" \
