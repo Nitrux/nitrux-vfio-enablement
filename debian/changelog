@@ -1,3 +1,9 @@
+nitrux-vfio-enablement (0.0.8)  nitrux; urgency=medium
+
+  * Don't remove firmware files .
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Nov 2023 23:47:00 -0500
+
 nitrux-vfio-enablement (0.0.7)  nitrux; urgency=medium
 
   * Update override script, remove refs in /etc/initramfs-tools/modules.
