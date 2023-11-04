@@ -1,6 +1,13 @@
+nitrux-vfio-enablement (0.0.9)  nitrux; urgency=medium
+
+  * Move the hook script to this package.
+  * Remove install vfio-pci /usr/bin/vfio-override from the module configuration files.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 03 Nov 2023 00:20:00 -0500
+
 nitrux-vfio-enablement (0.0.8)  nitrux; urgency=medium
 
-  * Don't remove firmware files .
+  * Don't remove firmware files.
 
  -- Uri Herrera <uri_herrera@nxos.org>  Tue, 02 Nov 2023 23:47:00 -0500
 
