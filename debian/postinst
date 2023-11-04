@@ -1,31 +1,42 @@
 #!/bin/bash
 
-set -x
+set -e
 
-#	Add vfio modules and files.
+append_lines() {
+    local file="$1"
+    shift
+    printf "%s\n" "$@" >> "$file"
+}
 
->> /etc/initramfs-tools/modules printf "%s\n" \
-	"softdep nvidia pre: vfio vfio_pci" \
-	"softdep nouveau pre: vfio vfio_pci" \
-	"softdep amdgpu pre: vfio vfio_pci" \
-	"softdep radeon pre: vfio vfio_pci" \
-	"softdep i915 pre: vfio vfio_pci" \
-	"vfio" \
-	"vfio_iommu_type1" \
-	"vfio_virqfd" \
-	"options vfio_pci ids=" \
-	"vfio_pci ids=" \
-	"vfio_pci" \
-	"nvidia" \
-	"nouveau" \
-	"amdgpu" \
-	"radeon" \
-	"i915"
+[ -d /etc/initramfs-tools ] || mkdir -p /etc/initramfs-tools
+[ -d /etc/modules-load.d ] || mkdir -p /etc/modules-load.d
 
->> /etc/modules printf "%s\n" \
-	"vfio" \
-	"vfio_iommu_type1" \
-	"vfio_pci" \
-	"vfio_pci ids="
 
-exit 0
+#	Add vfio modules and files to /etc/initramfs-tools/modules.
+
+append_lines /etc/initramfs-tools/modules \
+    "softdep nvidia pre: vfio vfio_pci" \
+    "softdep nouveau pre: vfio vfio_pci" \
+    "softdep amdgpu pre: vfio vfio_pci" \
+    "softdep radeon pre: vfio vfio_pci" \
+    "softdep i915 pre: vfio vfio_pci" \
+    "vfio" \
+    "vfio_iommu_type1" \
+    "vfio_virqfd" \
+    "options vfio_pci ids=" \
+    "vfio_pci ids=" \
+    "vfio_pci" \
+    "nvidia" \
+    "nouveau" \
+    "amdgpu" \
+    "radeon" \
+    "i915"
+
+
+#	Add vfio modules to /etc/modules-load.d/list-of-vfio-modules.conf to load at boot time.
+
+append_lines /etc/modules-load.d/list-of-vfio-modules.conf \
+    "vfio" \
+    "vfio_iommu_type1" \
+    "vfio_pci" \
+    "vfio_pci ids="

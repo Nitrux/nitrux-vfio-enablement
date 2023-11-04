@@ -9,5 +9,5 @@ esac
 # shellcheck source=/dev/null
 . /usr/share/initramfs-tools/hook-functions
 
-# Copy the script to the initramfs
-copy_exec /usr/bin/vfio-override /bin/
+# Do nothing for now.
+
