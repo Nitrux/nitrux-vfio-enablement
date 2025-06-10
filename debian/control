@@ -9,7 +9,7 @@ Homepage: http://nxos.org
 
 Package: nitrux-vfio-enablement
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, ipxe-qemu, libslirp0, ovmf, qemu-system-data, seabios, swtpm
 Description: Enable VFIO in Nitrux
  Adds module and initramfs-tools configurations files
   to enable VFIO passthrough in Nitrux

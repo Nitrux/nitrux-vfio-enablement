@@ -1,3 +1,9 @@
+nitrux-vfio-enablement (0.1.1)  nitrux; urgency=medium
+
+  * Add dependencies to this package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 10 Jun 2025 16:29:00 -0500
+
 nitrux-vfio-enablement (0.1.0)  nitrux; urgency=medium
 
   * Improve maintainer script.
