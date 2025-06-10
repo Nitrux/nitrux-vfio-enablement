@@ -1,4 +1,4 @@
-# Nitrux VFIO Enablement [![Build Status](https://travis-ci.org/Nitrux/nitrux-vfio-enablement.svg?branch=master)](https://travis-ci.org/Nitrux/enablement)
+# Nitrux VFIO Enablement
 
 This package adds the initramfs-tools and modules configuration to enable VFIO in Nitrux.
 
